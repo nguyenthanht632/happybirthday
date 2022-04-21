@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1650217834 source:d:\code\code_bai_tap\main.cpp
+1650555484 source:d:\code\code_bai_tap\main.cpp
 	<iostream>
 	<string>
+	<math.h>
 
