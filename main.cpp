@@ -22,327 +22,421 @@ int checks(double a,double b){
             return 0;
     }
 }
-//ex61
-bool check_number(int n){
-    int a=n%10;
-    n=n/10;
-    while(n>0){
-        int i=n%10;
-        n=n/10;
-        if(i<=a){
-            return false;
-        }
-        else{
-           a=i;
-        }
+//ex82
+double max_abc(double a,double b,double c){
+    double maxs;
+    maxs=a;
+    if(maxs<b){
+        maxs=b;
     }
-    return true;
+    if(maxs<c){
+        maxs=c;
+    }
+    return maxs;
 }
-//ex62
-int large_general(int a,int b){
-    int k=0;
-    for(int i=1;i<=a;i++){
-        if(a%i==0){
-            for(int j=1;j<=b;j++){
-                if(b%j==0){
-                    if(i==j&&k<i){
-                        k=i;
-                    }
-                }
-            }
-        }
-    }
-    return k;
-}
-//ex63
-int multiple_general (int a,int b){
-    int max_value;
-    int bcnn=1;
-    if(a>=b){
-        max_value=a;
-    }
-    else{
-        max_value=b;
-    }
-    int i=max_value;
-    while(1){
-        if(i%a==0&&i%b==0){
-            bcnn=i;
-            break;
-        }
-        else{
-            i=i+max_value;
-        }
-    }
-    return bcnn;
-}
-//ex64
-double solve_the_equation(double a,double b){
-    if(a==0){
-        if(b==0){
-            return 0;
-        }
-        else{
-            return 1;
-        }
-    }
-    else{
-        return -b/a;
-    }
-}
-//ex65
-void solve_the_equations(double a,double b,double c){
-    double denta=b*b-4*a*c;
-    if(a==0){
-        cout<< "da giai";
-    }
-    else{
-        if(denta<0){
-            cout<<"pt vn";
-        }
-        else if(denta==0){
-            cout<<"phuong trinh co nghiem kep: x1=x2= -" << -b/2*a;
-        }
-        else{
-            cout<<"phuong trinh co 2 nghiem phan biet: x1= "<<(-b+sqrt(denta))/(2*a)<<" and x2= " <<(-b-sqrt(denta))/(2*a);
-        }
-    }
-}
-//ex66
-void solve_the_equationss(double a,double b,double c){
-    if(a==0){
-        if(-c/b<0){
-            cout<<"pt vn";
-        }
-        else{
-            cout<<"the equation has 2 solutions: x1= "<<-sqrt(-c/b)<< " x2= "<<sqrt(-c/b);
-        }
-    }
-    else{
-       double denta=b*b-4*a*c;
-        if(denta<0){
-            cout<<"pt vn";
-        }
-        else if(denta==0){
-            if(-b/(2*a)>=0)
-            cout<<"the equation has 2 solutions: x1=-x2= " << sqrt(-b/(2*a));
-            else{
-                cout<<"no solution";
-            }
-        }
-        else{
-            cout<<"the equation has solutions:";
-            if((-b+sqrt(denta))/(2*a)>=0){
-                 cout<<"x1=-x2= "<<sqrt((-b+sqrt(denta))/(2*a))<<" and ";
-            }
-            if((-b-sqrt(denta))/(2*a)>=0){
-                cout<<"x3=-x4= "<<sqrt((-b-sqrt(denta))/(2*a));
-            }
-        }
-
-    }
-}
-//ex67
-//double S(int n, double x){
-//    double s=0;
-//    int a=1;
-//    double b;
-//    for(int i=1;i<=n;i++){
-//        b=b*x;
-//        s=s+b*a;
-//        a=a*(-1);
+//ex83
+//void check_numberz(double a, double b){
+//    if(a*b>0){
+//        cout<< a <<" and "<< b<<" same sign";
 //    }
-//    return s;
+//    else{
+//        cout<< a <<" and "<< b<<" different sign";
+//    }
 //}
-//ex68
-//int S(int n, int x){
-//    int a=1,p=1;
-//    int s;
+//ex85
+//void months(int month){
+//    switch(month){
+//    case 1:
+//    case 2:
+//    case 3:
+//        cout<<"Quy 1";
+//        break;
+//    case 4:
+//    case 5:
+//    case 6:
+//        cout<<"Quy 2";
+//        break;
+//    case 7:
+//    case 8:
+//    case 9:
+//        cout<<"Quy 3";
+//        break;
+//    case 10:
+//    case 11:
+//    case 12:
+//        cout<<"Quy 4";
+//        break;
+//    }
+//}
+//ex95
+//void abs_abc(double a,double b,double c){
+//    a=abs(a);
+//    b=abs(b);
+//    c=abs(c);
+//    cout<< a <<" "<<b<<" "<< c;
+//}
+//ex96
+//double fx(double x){
+//    int f;
+//    if(x>=5){
+//        f=2*x*x+5*x+9;
+//    }
+//    else{
+//        f=-2*x*x+4*x-9;
+//    }
+//    return f;
+//}
+//ex97
+//void triangle (double a,double b,double c){
+//    int i=a*a;
+//    int j=b*b;
+//    int k=c*c;
+//    if(a==b||b==c||c==a){
+//        cout<<"isosceles triangle";
+//    }
+//    else if (a==b&&b==c) {
+//        cout<<"equilateral triangle";
+//    }
+//    else if (i+j==k||j+k==i||k+i==j){
+//        cout<<"right triangle";
+//    }
+//    else{
+//        cout<<"regular triangle";
+//    }
+//}
+//ex98
+//void Solve_the_system_of_equations(double a,double b,double c,double d,double e,double f){
+//    double denta=a*e-b*d, denta1=-b*f+c*e, denta2=a*f-c*d;
+//    if(denta==0){
+//        if(denta1+denta2==0){
+//            cout<<"system of equations with infinite solutions";
+//        }
+//        else{
+//            cout<<"system of equations with no solution";
+//        }
+//    }
+//    else{
+//        cout<<"system of equations with solutions: x= "<< denta1/denta<<" y= "<<denta2/denta;
+//    }
+//
+//
+//}
+//ex99
+//void sapxeptangdan(double a, double b,double c){
+//    double temp;
+//    if(a>b){
+//        temp=a;
+//        a=b;
+//        b=temp;
+//    }
+//    if(a>c){
+//        temp=a;
+//        a=c;
+//        c=temp;
+//    }
+//    if(b>c){
+//        temp=b;
+//        b=c;
+//        c=temp;
+//    }
+//    cout<<a <<" "<< b<<" "<<c;
+//}
+//ex101
+//void month_year(int month,int year){
+//        if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){
+//            cout<<"31 day";
+//        }
+//        else if(month==4||month==6||month==9||month==11){
+//            cout<<"30 day";
+//        }
+//        else if(month==2){
+//            if(year%4==0){
+//                cout<<"29 day";
+//            }
+//            else{
+//                cout<<"28 day";
+//            }
+//        }
+//        else{
+//            cout<<"Moi nhap lai";
+//        }
+//}
+//ex111
+//b
+//void isosceles_triangle(int n){
+//    for(int i=0;i<(n);i++){
+//        if(i>=0&&i<(n-1)){
+//            for(int j=1;j<=(2*n-1);j++){
+//                if((n-i)==j||(n+i)==j){
+//                    cout<<" *";
+//                }
+//                else{
+//                    cout<<"  ";
+//                }
+//            }
+//        cout<<endl;
+//        }
+//        else{
+//            for(int j=0;j<(2*n-1);j++){
+//                cout<<" *";
+//            }
+//        }
+//
+//    }
+//
+//}
+//a
+//void isosceles_triangle(int n){
+//    for(int i=0;i<n;i++){
+//        for(int j=0;j<=(2*n-1);j++){
+//            if((n-i)<=j&&(n+i)>=j){
+//                cout<<" *";
+//            }
+//            else{
+//                cout<<"  ";
+//            }
+//        }
+//        cout<<endl;
+//    }
+//}
+//c
+//void isosceles_right_triangle(int n){
 //    for(int i=1;i<=n;i++){
+//        for(int j=1;j<=i;j++){
+//            cout<<" * ";
+//        }
+//        cout<<endl;
+//    }
+//}
+//d
+//void isosceles_right_triangle_empty (int n){
+//    for(int i=1;i<=n;i++){
+//        if(i==1){
+//            cout<<" * "<<endl;
+//        }
+//        else if (2<=i&& i<n){
+//            for(int j=1;j<=i;j++){
+//                if(j==1||j==i){
+//                    cout<<" * ";
+//                }
+//                if(1<j&&j<i){
+//                    cout<<"   ";
+//                }
+//            }
+//            cout<<endl;
+//        }
+//        else{
+//            for(int j=1;j<=n;j++){
+//                cout<<" * ";
+//            }
+//        }
+//    }
+//}
+//ex112
+//a
+//void solid_rectangle (int m, int n){
+//    for(int i=1;i<=n;i++){
+//        for(int j=1;j<=m;j++){
+//            cout<<" * ";
+//        }
+//        cout<<endl;
+//    }
+//}
+//b
+//void solid_rectangle (int m, int n){
+//    for(int i=1;i<=n;i++){
+//        if(i==1||i==n){
+//            for(int j=1;j<=m;j++){
+//            cout<<" *";
+//            }
+//        cout<<endl;
+//        }
+//        else{
+//            for(int j=1;j<=m;j++){
+//                if(j==1||j==m){
+//                    cout<<" *";
+//                }
+//                else{
+//                    cout<<"  ";
+//                }
+//            }
+//            cout<<endl;
+//        }
+//    }
+//}
+//ex113
+//void sinx (int n,double x){
+//    double s=0,p=x,b=1;
+//    double a=1;
+//    for(int i=1;i<=(2*n+1);i=i+2){
+//        s=s+(double)(p*a)/b;
+//        b=b*(i+1)*(i+2);
 //        p=p*x*x;
 //        a=a*(-1);
-//        s=s+p*a;
-//    }
-//    return s;
-//}
-//ex69
-//int S (int n,int x){
-//    int a=1,p=x;
-//    int s=0;
-//    for(int i=1;i<=n;i++){
-//        s=s+p*a;
-//        a=a*(-1);
-//        p=p*x*x;
-//    }
-//    return s;
-//}
-//ex70
-//void S (int n){
-//    int a=0,p=1;
-//    double s=0;
-//    for(int i=1;i<=n;i++){
-//        a=a+i;
-//        s=s+(float)p/(a);
-//        p=p*(-1);
 //    }
 //    cout<< s;
 //}
-//ex71
-//void S (int n, double x){
-//    int a=0,p=1,b=1;
-//    double s=0;
-//    for(int i=1;i<=n;i++){
-//        a=a+i;
-//        p=p*(-1);
-//        b=b*x;
-//        s=s+(double)p*b/a;
-//    }
-//    cout<<s;
 //}
-//ex72
-//void S (int n, double x){
-//    int a=1,p=1,b=1;
-//    double s=0;
-//    for(int i=1;i<=n;i++){
-//        a=a*i;
-//        p=p*(-1);
-//        b=b*x;
-//        s=s+(double)p*b/a;
-//    }
-//    cout<<s;
-//}
-//ex73
-//void S (int n, double x){
-//    int a=1,p=-1,b=1;
-//    double s=-1;
-//    for(int i=1;i<=(2*n);i=i+2){
-//        a=a*i*(i+1);
-//        p=p*(-1);
-//        b=b*x*x;
-//        s=s+(double)p*b/a;
-//    }
-//    cout<<s;
-//}
-//ex74
-//void S (int n, double x){
-//    int a=1,p=1,b=x;
-//    double s=1-x;
-//    for(int i=3;i<=(2*n+1);i=i+2){
-//         a=a*i*(i-1);
-//        b=b*x*x;
-//        s=s+(double)p*b/a;
-//        p=p*(-1);
-//    }
-//    cout<<s;
-//}
-//ex75
-//int check_numbers(int n){
-//    int value=1;
-//   while(n>1){
-//        if(n%2==1){
-//            value=0;
+//ex119
+//void prime_number(int n){
+//    for(int i=2;i<n;i++){
+//        int value=0;
+//        for(int j=2;j<=i;j++){
+//            if(i%j==0){
+//                value++;
+//            }
 //        }
-//        n=n/2;
-//   }
-//   if(value==1){
-//    return 0;
-//   }
-//   else{
-//    return 1;
-//   }
-//
+//        if(value==1){
+//            cout<< i<<" ";
+//        }
+//    }
 //}
-//ex76
-int check_numbers(int n){
-    int value=1;
-   while(n>1){
-        if(n%3!=0){
-            value=0;
+//ex120
+//void square_number (int n){
+//    for(int i=1;i<n;i++){
+//        for(int j=1;j<=i;j++){
+//            if(j*j==i){
+//                cout<<i<<" ";
+//            }
+//        }
+//    }
+//}
+//ex121
+long long check_length (long long n){
+    long long value=0;
+    while(n>0){
+        n=n/10;
+        value++;
+    }
+    return value;
+}
+void amstrong_number (long long n){
+    long long l=check_length(n);
+    long long m=n;
+    long long s=0;
+    while(m>0){
+        int a=m%10;
+        long long b=1;
+        for(long long i=1;i<=l;i++){
+                b=b*a;
         }
-        n=n/3;
-   }
-   if(value==1){
-    return 0;
-   }
-   else{
-    return 1;
-   }
-
+        s=s+b;
+        m=m/10;
+    }
+    if(s==n){
+        cout<<n<<" ";
+    }
 }
 int main(){
-    double a,b,c,n,x;
-//    cout << "add a,b,c: ";
-//    cin>> a>>b>>c;
-//    cout<< "add n,x: ";
-//    cin>>n>>x;
-cout<< "add n: ";
-cin>>n;
-//ex75,76
-    int number=check_numbers(n);
-    if(number==0){
-        cout<<"so co dang 2^k/3^k";
-    }
-    else{
-        cout<<"so k co dang 2^k/3^k";
-    }
-//ex75,76
-//ex70,71,72,73,74
-//S(n,x);
-//ex70,71,72,73,74
-//ex67,68,69
-//    double ss=S(n,x);
+//ex121
+long long a;
+cout<<"add a: ";
+cin>>a;
+long long l=check_length(a);
+for(long long i=1;i<=a;i++){
+ amstrong_number(i);
+ }
+//ex120
+//int n;
+//cout<<"add n: ";
+//cin>> n;
+//int checkss=check(n);
+//if(checkss==0){
+//    cout<<"Nhap lai";
+//}
+//else{
+//    square_number(n);
+//}
+//ex119
+//int n;
+//cout<< "add n: ";
+//cin>> n;
+//int checkss=check(n);
+//if(checkss==0){
+//    cout<<"Nhap lai";
+//}
+//else{
+//prime_number(n);
+//}
+//ex115
+//string name;
+//int math,literature;
+//cout<<"Nhap diem: Toan, Van: ";
+//cin>>math>>literature;
+//cin.ignore();
+//cout<<"Nhap ten: ";
+//getline(cin,name);
+//cout<<name;
+//cout<<endl;
+//cout<<"DTB: "<< (math+literature)/(2.0);
+//ex113
+//double n,x;
+//cout<<"add n,x: ";
+//cin>>n>>x;
+//sinx(n,x);
+//ex112
+// int m,n;
+// cout<<"add m,n: ";
+// cin>>m>>n;
+// solid_rectangle(m,n);
+//ex111
+//int h;
+//
+//cout<<"add h: ";
+//cin>> h;
+//isosceles_triangle(h);
+//isosceles_right_triangle(h); //c
+//isosceles_right_triangle_empty (h);//d
+//ex101
+//int month, year;
+//cout<<"add month, year: ";
+//cin>>month>>year;
+//month_year(month,year);
+//ex99
+//double a,b,c;
+//cout<<"add a,b,c: ";
+//cin>>a >> b>>c;
+//sapxeptangdan(a,b,c);
+//ex98
+//double a,b,c,d,e,f;
+//cout<<"add a,b,c,d,e,f: ";
+//cin>>a>>b>>c>>d>>e>>f;
+//Solve_the_system_of_equations(a,b,c,d,e,f);
+//ex97
+//double a,b,c;
+//cout<<"add a,b,c: ";
+//cin>>a>>b>>c;
+//triangle(a,b,c);
+//ex96
+//double x;
+//cout<<"add x: ";
+//cin>> x;
+//int ff=fx(x);
+//cout<<ff;
+//ex95
+//double a,b,c;
+//cout<< "Nhap a,b,c: ";
+//cin>> a>>b>>c;
+//abs_abc(a,b,c);
+//ex88
+//    char kytu;
+//    for(kytu='A';kytu<='Z';kytu++){
+//        cout<<kytu<<" ";
+//    }
+//ex85
+//int monthss;
+//cout<<"add month: ";
+//cin>> monthss;
+//months(monthss);
+//ex83
+// double a,b;
+// cout<< " add a,b: ";
+// cin>> a>>b;
+// check_numberz(a,b);
+//ex82
+//    double a,b,c;
+//    cout<<"Nhap a,b,c: ";
+//    cin>>a>>b>>c;
+//    double ss=max_abc(a,b,c);
 //    cout<<ss;
-//ex67,68,69
-//ex66
-//    solve_the_equationss(a,b,c);
-//ex65
-//    solve_the_equations(a,b,c);
-//ex65
-//ex64
-//    double value=solve_the_equation(a,b);
-//    if(value==0){
-//        cout<<"Equation with infinite solutions";
-//    }
-//    else if(value==1){
-//        cout<<"the equation has no solution";
-//    }
-//    else{
-//        cout<< value;
-//    }
-//ex63
-//    int checkss=checks(a,b);
-//    int value=multiple_general(a,b);
-//    if(checkss==0){
-//        cout<<"errol";
-//    }
-//    else{
-//        cout<<value;
-//    }
-//ex63
-//ex62
-//    int value=large_general(a,b);
-//    cout<< value;
-//ex62
-//    string n;
-//    cout<< "add n";
-//    cin>>n;
-//    int check=check_number(n);
-//ex60
-//    int n;
-//    cout<<"add n: ";
-//    cin>> n;
-//    if(check==0){
-//        cout<<"errol";
-//    }
-//    else{
-//        bool checks=check_number(n);
-//        if(checks){
-//            cout<<"decrease";
-//        }
-//        else{
-//            cout<<"no conclude";
-//        }
-//    }
-//ex60
-
 }
