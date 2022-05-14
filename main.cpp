@@ -2,1126 +2,910 @@
 #include <string>
 #include <math.h>
 using namespace std;
-//void nhapmang (double a[],int n){
+//ex246
+//ex250
+//void nhapmang(int a[],int n){
 //    for(int i=0;i<n;i++){
-//        cout<<"Nhap a["<<i<<"]: ";
+//        cout<<"Nhap mang a["<<i<<"]: ";
 //        cin>>a[i];
 //    }
 //}
-//void xuat(double a[],int n){
+//void sxtang (int a[], int n){
 //    for(int i=0;i<n;i++){
-//        cout<<a[i]<<" ";
+//        int value=0;
+//        for(int j=0;j<n;j++)
+//        if(a[i]<=a[j]){
+//            value=a[i];
+//            a[i]=a[j];
+//            a[j]=value;
+//        }
 //    }
 //}
-//void nhapmang (int a[],int n){
+//void ktcsc(int a[],int n){
+//     int values=a[1]-a[0];
+//     int flag=0;
+//   for(int i=0;i<(n-1);i++){
+//    int value=a[i+1]-a[i];
+//    if(value==values){
+//        flag++;
+//    }
+//   }
+//   if(flag==(n-1)){
+//    cout<< "mang tren la csc voi cong sai: "<<values;
+//   }
+//   else{
+//    cout<<"mang k phai csc";
+//   }
+//}
+//ex252
+//void nhapmang(int a[],int n){
 //    for(int i=0;i<n;i++){
-//        cout<<"Nhap a["<<i<<"]: ";
+//        cout<<"Nhap mang a["<<i<<"]: ";
 //        cin>>a[i];
 //    }
 //}
-void xuat(int a[],int n){
-    for(int i=0;i<n;i++){
-        cout<<a[i]<<" ";
-    }
-}
-//ex134
-//double max_value (double a[],int n){
-//    nhapmang(a,n);
-//    int maxs=0;
-//    for(int i=1;i<n;i++){
-//        if(a[maxs]<a[i]){
-//            a[maxs]=a[i];
-//        }
-//    }
-//    return a[maxs];
-//}
-//ex135
-//void value>0_s (double a[],int n){
-//    nhapmang(a,n);
+//void ktdangsong(int a[],int n){
 //    int value=0;
-//    for(int i=0;i<n;i++){
-//        if(0<a[i]){
-//            cout<<a[i];
-//            break;
-//        }
-//       else{
-//        value++;
-//       }
-//    }
-//    if(value==n){
-//        cout<<"-1";
-//    }
-//}
-//ex136
-//void last_even_number(int a[],int n){
-//    nhapmang(a,n);
-//    int value=0;
-//    for(int i=n;i>0;i--){
-//        if(a[i]%2==0){
-//            cout<<a[i];
-//            break;
-//        }
-//        else{
-//            value++;
-//        }
-//    }
-//    if(value==n){
-//        cout<<"-1";
-//    }
-//}
-//ex137
-//void position_with_minimum_value(double a[], int n){
-//    nhapmang(a,n);
-//    int value=0;
-//    for(int i=0;i<n;i++){
-//        if(a[i]<=a[value]){
-//            value=i;
-//        }
-//    }
-//    cout<<value;
-//}
-//ex138
-//void first_even_value_position(int a[],n){
-//    int value=0;
-//    nhapmang(a,n);
-//    for(int i=0;i<n;i++){
-//        if(a[i]%2==0){
-//            cout<<i;
-//            break;
-//        }
-//        else{
-//            value++;
-//        }
-//    }
-//    if(value==n){
-//        cout<<"-1";
-//    }
-//}
-//ex139
-//void the_last_perfect_number_location(int a[],int n){
-//    nhapmang(a,n);
-//    int value=0, value1=0;
-//    for(int i=n-1;i>=0;i--){
-//        for(int j=1;j<a[i];j++){
-//            if(a[i]%j==0){
-//                value=value+j;
-//            }
-//        }
-//        if(value==a[i]){
-//            cout<<i;
-//            break;
-//        }
-//        else{
-//                value1++;
-//            }
-//    }
-//    if(value1==n){
-//        cout<<"-1";
-//    }
-//}
-//ex140
-//void small_positive_value(double a[],int n){
-//    nhapmang(a,n);
-//    double value=0,value1=0;
-//    for(int i=0;i<n;i++){
-//        if(a[i]>0){
-//            value=a[i];
-//            break;
-//        }
-//    }
-//    for(int i=0;i<n;i++){
-//        if(a[i]>0){
-//            if(a[i]<value){
-//                value=a[i];
-//            }
-//        }
-//        else{
-//            value1++;
-//        }
-//    }
-//    if(value1==n){
-//        cout<<"-1";
-//    }
-//    else {
-//        cout<<value;
-//    }
-//}
-//ex141
-//void small_positive_value_location(double a[],int n){
-//    nhapmang(a,n);
-//    double value1=0;
-//    int value=0;
-//    for(int i=0;i<n;i++){
-//        if(a[i]>0){
-//            value=i;
-//            break;
-//        }
-//    }
-//    for(int i=0;i<n;i++){
-//        if(a[i]>0){
-//            if(a[i]<a[value]){
-//                value=i;
-//            }
-//        }
-//        else{
-//            value1++;
-//        }
-//    }
-//    if(value1==n){
-//        cout<<"-1";
-//    }
-//    else {
-//        cout<<value;
-//    }
-//}
-//ex150
-//void maximum_negative_value(double a[],int n){
-//    nhapmang(a,n);
-//    double value=0, value1=0;
-//    for(int i=0;i<n;i++){
-//        if(a[i]<0){
-//            value=a[i];
-//            break;
-//        }
-//    }
-//    for(int i=0;i<n;i++){
-//        if(a[i]<0){
-//            if(a[i]>value){
-//                value=a[i];
-//            }
-//        }
-//        else{
-//            value1++;
-//        }
-//    }
-//    if(value1==n){
-//        cout<<"0";
-//    }
-//    else{
-//        cout<<value;
-//    }
-//}
-//ex155
-//double max_value (double a[],int n){
-//    int maxs=0;
-//    for(int i=1;i<n;i++){
-//        if(a[maxs]<=a[i]){
-//            a[maxs]=a[i];
-//        }
-//    }
-//    return maxs;
-//}
-//void furthest_from_x_value(double a[],int n,double x){
-//    nhapmang(a,n);
-//    double b[n];
-//    for(int i=0;i<n;i++){
-//        b[i]=abs(a[i]-x);
-//    }
-//    int maxs=0;
-//    for(int i=1;i<n;i++){
-//        if(a[maxs]<=a[i]){
-//            a[maxs]=a[i];
-//        }
-//    }
-//    cout<<a[maxs];
-//}
-//ex157
-//void timdoan (double a[],int n){
-//    nhapmang(a,n);
-//    int mins=0;
-//    for(int i=1;i<n;i++){
-//        if(a[mins]>=a[i]){
-//            a[mins]=a[i];
-//        }
-//    }
-//    cout<<"["<<a[mins]<<",";
-//    int maxs=0;
-//    for(int i=1;i<n;i++){
-//        if(a[maxs]<=a[i]){
-//            a[maxs]=a[i];
-//        }
-//    }
-//    cout<<a[maxs]<<"]";
-//
-//}
-//ex158
-//void timx (double a[],int n){
-//    nhapmang(a,n);
-//    int mins=0;
-//    int maxs=0;
-//    for(int i=1;i<n;i++){
-//        if(a[mins]>=a[i]){
-//            mins=i;
-//        }
-//    }
-//    for(int i=1;i<n;i++){
-//        if(a[maxs]<=a[i]){
-//            maxs=i;
-//        }
-//    }
-//    if(abs(a[mins])>=abs(a[maxs])){
-//        cout<<abs(a[mins]);
-//    }
-//    else{
-//        cout<<abs(a[maxs]);
-//    }
-//}
-//void dautientrongkhoang (double a[],int n,double x,double y){
-//    nhapmang(a,n);
-//    int value=0;
-//    for(int i=0;i<n;i++){
-//        if(a[i]>=x&&a[i]<=y){
-//            cout<<a[i];
-//            break;
-//        }
-//        else{
-//            value++;
-//        }
-//    }
-//    if(value==n){
-//        cout<<x;
-//    }
-//}
-//ex162
-//void find_location(double a[],int n){
-//    int value=0;
-//    nhapmang(a,n);
-//    for(int i=1;i<=n-2;i++){
-//        if(a[i]==(a[i-1]*a[i+1])){
-//            cout<<i<<endl;
-//        }
-//        else{
+//    for(int i=1;i<(n-1);i++){
+//        if((a[i]<a[i-1]&&a[i]<a[i+1])||(a[i]>a[i-1]&&a[i]>a[i+1])){
 //            value++;
 //        }
 //    }
 //    if(value==(n-2)){
-//        cout<<"-1";
-//    }
-//}
-//ex164
-//void nhapmang (string a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"Nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//int check_symmetrical_number(string n){
-//   int l=n.length();
-//   int counts=0;
-//   if(n[0]=='0'){
-//       return 0;
-//   }
-//   else{
-//   for(int i=0;i<l;i++){
-//       if(n[i]>'9'||n[i]<0)
-//       return 0;
-//   }
-//   for(int i=0;i<(l/2);i++){
-//       if(n[l-1-i]==n[i]){
-//           counts=counts+1;
-//       }
-//   }
-//   if(counts==((int)l/2)){
-//       return 1;
-//   }
-//   else{
-//       return 2;
-//   }
-//   cout<<counts;
-//   }
-//}
-//void fine_location(string a[],int n){
-//    int value=0;
-//    nhapmang(a,n);
-//    for(int i=0;i<n;i++){
-//       int ss= check_symmetrical_number(a[i]);
-//        if(ss==1){
-//            cout<<a[i];
-//            break;
-//        }
-//        else{
-//            value++;
-//        }
-//    }
-//    if(value==n){
-//        cout<<"-1";
-//    }
-//
-//}
-//ex165
-//void nhapmang (int a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"Nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void dauledautien(int a[],int n){
-//    nhapmang(a,n);
-//    int value1;
-//    int b[n],c[n];
-//    for(int i=0;i<n;i++){
-//        int value=0;
-//        b[i]=a[i];
-//        c[i]=a[i];
-//        while(b[i]>0){
-//            b[i]=b[i]/10;
-//            value++;
-//        }
-//        for(int j=1;j<=(value-1);j++){
-//            c[i]=c[i]/10;
-//        }
-//        if(c[i]%2==1){
-//            cout<<a[i];
-//            break;
-//        }
-//        else{
-//            value1++;
-//        }
-//    }
-//        if(value1==n){
-//            cout<<"0";
-//        }
-//}
-//ex167
-//void nhapmang (int a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"Nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//int checknumber(int n){
-//   int number=0,number1=0;
-//    while(n>0){
-//        int k=n%10;
-//        if(k%2!=0){
-//            number++;
-//        }
-//        n=n/10;
-//        number1++;
-//    }
-//    if(number1==number){
-//        return 1;
+//        cout<<"mang co dang song";
 //    }
 //    else{
-//        return 0;
-//    }
-//
-//}
-//void find_value (int a[],int n){
-// nhapmang(a,n);
-// int m=0,k=0;
-// for(int i=0;i<n;i++){
-//  int value=checknumber(a[i]);
-//  if(value==1){
-//    m=a[i];
-//  }
-//  if(value==1){
-//    if(a[i]>=m){
-//        m=a[i];
-//    }
-//  }
-//  else{
-//    k++;
-//  }
-// }
-// if(k==n){
-//    cout<<"-1";
-// }
-// else{
-//    cout<<m;
-// }
-//}
-//ex169
-//void nhapmang (int a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"Nhap a["<<i<<"]: ";
-//        cin>>a[i];
+//        cout<<"mang khong co dang song";
 //    }
 //}
-//void find_value(int a[],int n){
-//    int valuelmin,valuele,b=0;
-//    nhapmang(a,n);
-//    for(int i=0;i<n;i++){
-//        if(a[i]%2!=0){
-//            b++;
-//        }
-//    }
-//    if(b=0){
-//        cout<<"-1";
-//    }
-//    else{
-//      for(int i=0;i<n;i++){//đánh dấu vị trí lẻ đầu tiên
-//        if(a[i]%2!=0){
-//            valuele=a[i];
-//            break;
-//            }
-//        }
-//        for(int i=0;i<n;i++){//tìm số lẻ bé nhất
-//            if(a[i]%2!=0&&a[i]<=valuele){
-//                valuelmin=a[i];
-//            }
-//        }
-//        cout<<valuelmin-1;
-//    }
-//}
-//ex171
-//int uclnab(int a,int b){
-//    while(a!=b){
-//        if(a>b){
-//            a=a-b;
-//        }
-//        else{
-//            b=b-a;
-//        }
-//    }
-//    return a;
-//}
-//int ucln (int a[],int n){
-//    nhapmang(a,n);
-//    for(int i=0;i<n;i++){
-//        a[i]=uclnab(a[i],a[i+1]);
-//    }
-//    return a[1];
-//}
-//void find_value (int a[],int n){
-//    nhapmang(a,n);
-//    int one=0,two=0,three=0,four=0,five=0,six=0,seven=0,eight=0,nine=0;
-//    for(int i=0;i<n;i++){
-//        while(a[i]>0){
-//            int b=a[i]%10;
-//            switch(b){
-//            case 1:
-//                one++;
-//                break;
-//            case 2:
-//                two++;
-//                break;
-//            case 3:
-//                three++;
-//                break;
-//            case 4:
-//                four++;
-//                break;
-//            case 5:
-//                five++;
-//                break;
-//            case 6:
-//                six++;
-//                break;
-//            case 7:
-//                seven++;
-//                break;
-//            case 8:
-//                eight++;
-//                break;
-//            case 9:
-//                nine++;
-//                break;
-//            }
-//            a[i]=a[i]/10;
-//        }
-//    }
-//    int mins=one;
-//    if(one!=0&&two!=0&&two<=mins){
-//        mins=two;
-//    }
-//    if(three!=0&&three<=mins){
-//        mins=three;
-//    }
-//    if(four!=0&&four<=mins){
-//        mins=four;
-//    }
-//    if(five!=0&&five<=mins){
-//        mins=five;
-//    }
-//    if(six!=0&&six<=mins){
-//        mins=six;
-//    }
-//    if(seven!=0&&seven<=mins){
-//        mins=seven;
-//    }
-//    if(eight!=0&&eight<=mins){
-//        mins=eight;
-//    }
-//    if(nine!=0&&nine<=one){
-//        mins=nine;
-//    }
-//    if(mins==one){
-//        cout<<"1"<<endl;
-//    }
-//    if(mins==two){
-//        cout<<"2"<<endl;
-//    }
-//    if(mins==three){
-//        cout<<"3"<<endl;
-//    }
-//    if(mins==four){
-//        cout<<"4"<<endl;
-//    }
-//    if(mins==five){
-//        cout<<"5"<<endl;
-//    }
-//    if(mins==six){
-//        cout<<"6"<<endl;
-//    }
-//    if(mins==seven){
-//        cout<<"7"<<endl;
-//    }
-//    if(mins==eight){
-//        cout<<"8"<<endl;
-//    }
-//    if(mins==nine){
-//        cout<<"9"<<endl;
-//    }
-//}
-//ex174
-//void nhapmang (double a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"Nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void find_value(double a[], int n){
-//    nhapmang(a,n);
-//    for(int i=0;i<n;i++){
-//        for(int j=i;j<n;j++){
-//            if(a[i]<=a[j]){
-//                cout<<"( "<<a[i]<<","<<a[j]<<" )"<<endl;
-//            }
-//        }
-//    }
-//}
-//ex175
-//void nhapmang (double a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"Nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void find_2_value(double a[], int n){
-//    nhapmang(a,n);
-//    double value=abs(a[0]-a[1]);
-//    for(int i=0;i<n;i++){
-//        for(int j=i+1;j<n;j++){
-//            if(abs(a[i]-a[j])<=value){
-//                value=abs(a[i]-a[j]);
-//            }
-//        }
-//    }
-//    for(int i=0;i<n;i++){
-//        for(int j=i+1;j<n;j++){
-//            if(abs(a[i]-a[j])==value){
-//                cout<<a[i]<<" "<<a[j]<<endl;
-//            }
-//        }
-//    }
-//}
-//ex179
+//ex253
 //void nhapmang(double a[],int n){
 //    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
+//        cout<<"Nhap mang a["<<i<<"]: ";
 //        cin>>a[i];
 //    }
 //}
-//void find_value(double a[],int n){
-//    int flag=0;
-//    nhapmang(a,n);
+//void xuat (double a[], int &n){
 //    for(int i=0;i<n;i++){
-//        if(a[i]>abs(a[i+1])){
-//            cout<<a[i]<<" ";
-//            flag=1;
-//        }
-//    }
-//    if(flag==0){
-//        cout<<"not have value";
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
 //    }
 //}
-//ex181
-//void nhapmang(int  a[],int n){
+//void rutgonmang(double a[], int &n){
 //    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void find_value(int a[],int n){
-//    nhapmang(a,n);
-//    for(int i=0;i<n;i++){
-//        if(i==0){
-//            if(a[1]%2==0){
-//                cout<<a[0]<<" ";
-//            }
-//        }
-//        else if(i==(n-1)){
-//            if(a[n-2]%2==0){
-//                    cout<<a[n-1]<<" ";
+//        for(int j=n-1;j>=(i+1);j--){
+//            if(a[j]==a[i]){
+//                if(j>=n){
+//                    j=n-1;
 //                }
-//        }
-//        else{
-//            if(a[i+1]%2==0||a[i-1]%2==0){
-//                cout<<a[i]<<" ";
+//                    for(int k=j;k<n-1;k++){
+//                        a[k]=a[k+1];
+//                    }
+//                --n;
 //            }
 //        }
 //    }
 //}
-//ex186
+//void checkmang(double a[], double b[], int &n, int &m){
+//    int flag=0;
+//    for(int i=0;i<n;i++){
+//        for(int j=0;j<m;j++){
+//            if(b[j]==a[i]){
+//                flag++;
+//                break;
+//            }
+//        }
+//    }
+//    if(flag==n){
+//        cout<<"tat ca phan tu trong mang a co trong b";
+//    }
+//    else{
+//        cout<<"chua ket luan duoc";
+//    }
+//}
+//ex257
 //void nhapmang(double a[],int n){
 //    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
+//        cout<<"Nhap mang a["<<i<<"]: ";
 //        cin>>a[i];
 //    }
 //}
-//void find_location(double a[], int n){
-//    nhapmang(a,n);
-//    int find_first_audio_number=0;
+//void xuat (double a[], int n){
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void vitriletang(double a[], int n){
+//    for(int i=1;i<n;i+=2){
+//        if(i%2!=0){
+//            for(int j=0;j<n;j++){
+//                if(j%2!=0){
+//                    if(a[i]<=a[j]){
+//                        double value=a[i];
+//                        a[i]=a[j];
+//                        a[j]=value;
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+//ex258ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (double a[], int &n){
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//double timsonguyento(double n){//tìm số nguyên tố
+//    if(n==(int)n){
+//        if(n<=1){
+//            return 1;
+//        }
+//        else{
+//            int flag=0;
+//            for(int i=1;i<n;i++){
+//                if((int)n%i==0){
+//                    flag++;
+//                }
+//            }
+//            if(flag==1){
+//                return 2;
+//            }
+//            else{
+//                return 0;
+//            }
+//        }
+//    }
+//}
+//void nguyetotang(double a[],int n){
+//    int value=0;
+//    for(int i=0;i<n;i++){//sắp xếp các số nguyên tố trong mảng
+//        double flag=timsonguyento(a[i]);
+//        if(flag==2){
+//            for(int j=i;j<n;j++){
+//                double flags=timsonguyento(a[j]);
+//                if(flags==2){
+//                     if(a[j]<=a[i]){
+//                    value=a[i];
+//                    a[i]=a[j];
+//                    a[j]=value;
+//                }
+//                }
+//            }
+//        }
+//    }
+//}
+//ex260ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void rutgonmang(double a[], int &n){//rút gọn mảng
+//    for(int i=0;i<n;i++){
+//        for(int j=(n-1);j>i;j--){
+//            if(a[j]==a[i]){
+//                if(j>=n){
+//                    j=n-1;
+//                }
+//                for(int k=j;k<n;k++){
+//                    a[k]=a[k+1];
+//                }
+//                --n;
+//            }
+//        }
+//    }
+//}
+//void kthoanvi(double a[],double b[], int &n,int &m){//Kiểm tra mảng hoán vị
+//    int flag=0;
+//    if(n==m){
+//        for(int i=0;i<n;i++){
+//            for(int j=0;j<n;j++){
+//                if(b[j]==a[i]){
+//                    flag++;
+//                }
+//            }
+//        }
+//    if(flag==n){
+//        cout<<"mang b la hoan vi cua mang a";
+//    }
+//    else{
+//        cout<<"chua ket luan duoc";
+//    }
+//    }
+//    else{
+//        cout<<"chua ket luan duoc";
+//    }
+//}
+//ex263ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (double a[], int n){//xuất mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void sxmangduongtang(double a[],int n){//sắp xếp mảng dương tăng dần
+//    for(int i=0;i<n;i++){
+//        if(a[i]>0){
+//            for(int j=i;j<n;j++){
+//                if(a[j]>0){
+//                    if(a[j]<=a[i]){
+//                        int value=a[i];
+//                        a[i]=a[j];
+//                        a[j]=value;
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+//void sxmangamgiam(double a[],int n){//sắp xếp mảng dương giảm dần
 //    for(int i=0;i<n;i++){
 //        if(a[i]<0){
-//            find_first_audio_number=a[i];
-//            break;
-//        }
-//    }
-//    for(int i=0;i<n;i++){
-//        if(a[i]==find_first_audio_number){
-//            cout<<i<<" ";
-//        }
-//    }
-//}
-//ex189
-//void nhapmang(int a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void lietkedadule(int a[],int n){
-//    nhapmang(a,n);
-//    int value=0;
-//    int b[n],c[n];
-//    for(int i=0;i<n;i++){
-//        b[i]=a[i];
-//        c[i]=a[i];
-//        int m=0;
-//        while(b[i]>0){
-//            b[i]=b[i]/10;
-//            m++;
-//        }
-//        c[i]=c[i]/(pow(10,m-1));
-//        if(c[i]%2!=0){
-//            cout<<a[i]<<" ";
-//            value=1;
-//        }
-//    }
-//    if(value==0){
-//        cout<<"khong thoa man";
-//    }
-//}
-//ex195
-//void nhapmang(double a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void find_abc(double a[],int n){
-//    nhapmang(a,n);
-//    int value=0;
-//    for(int i=0;i<n;i++){
-//        for(int j=(i+1);j<n;j++){
-//            for(int k=(j+1);k<n;k++){
-//                if(a[i]==(a[j]+a[k])){
-//                    cout<<"( "<<a[i]<<","<<a[j]<<","<<a[k]<<" )"<<endl;
-//                    value++;
-//                }
-//                else if(a[j]==(a[i]+a[k])){
-//                    cout<<"( "<<a[j]<<","<<a[i]<<","<<a[k]<<" )"<<endl;
-//                    value++;
-//                }
-//                else if(a[k]==(a[i]+a[j])){
-//                    cout<<"( "<<a[k]<<","<<a[i]<<","<<a[j]<<" )"<<endl;
-//                    value++;
-//                }
-//                else{
-//
+//            for(int j=i;j<n;j++){
+//                if(a[j]<0){
+//                    if(a[j]>=a[i]){
+//                        int value=a[i];
+//                        a[i]=a[j];
+//                        a[j]=value;
+//                    }
 //                }
 //            }
 //        }
 //    }
-//    if(value==0){
-//        cout<<"ko co gia tri thoa man";
-//    }
 //}
-//ex202
-//void nhapmang(int a[],int n){
+//ex264ok
+//void nhapmang(double a[],int n){//nhập mảng
 //    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
+//        cout<<"Nhap mang a["<<i<<"]: ";
 //        cin>>a[i];
 //    }
 //}
-//void tongchuc(int a[],int n){
-//    nhapmang(a,n);
-//    int b[n];
-//    int s=0;
+//void xuat (double a[], int n){//xuất mảng
 //    for(int i=0;i<n;i++){
-//        b[i]=a[i];
-//        b[i]=b[i]/10;
-//        int value=b[i]%10;
-//        if(value==5){
-//            s=s+a[i];
-//        }
-//    }
-//    cout<<s;
-//}
-//ex215
-//void nhapmang(double a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
-//        cin>>a[i];
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
 //    }
 //}
-//void khoangcachtb (double a[],int n){
-//    nhapmang(a,n);
-//    int value=0;
-//    double s=0;
+//void sapxepmang(double a[], int n){//sắp xếp mảng tăng dần
 //    for(int i=0;i<n;i++){
-//        for(int j=(i+1);j<n;j++){
-//            s=s+abs(a[i]-a[j]);
-//            value++;
-//        }
-//    }
-//    cout<<"khoang cach trung binh: "<< s/value<<endl;
-//}
-//ex229
-//void nhapmang(double a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void demphanbiet (double a[], int n){
-//    nhapmang(a,n);
-//    int result = 0; //kết quả (số lượng các phần tử khác nhau)
-//    for (int i = 0; i < n; i++)
-//    {
-//        // kiểm tra xem từ 0->i-1 phần tử a[i] đã xuất hiện chưa, nếu chưa thì tăng kết quả lên 1
-//        bool isOccur=false;  // giả sử là chưa xuất hiện
-//        for (int j = 0; j < i; j++)
-//            if (a[i] == a[j])
-//            {
-//                isOccur = true; // đã xuất hiện rồi
-//                break;
-//            }
-//        if (!isOccur) result++; // tăng kết quả lên 1
-//    }
-//    cout<< result;
-//}
-//ex230
-//void nhapmang(double a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void lietke (double a[],int n){
-//    nhapmang(a,n);
-//  for (int i = 0; i < n; i++)
-// {
-//  int dem = 0;
-//  for (int j = 0; j < n; j++)
-//  {
-//   if (a[i] == a[j])
-//   {
-//    if (j < i)
-//     break;
-//    else
-//     dem++;
-//   }
-//  }
-//
-//  if (dem !=0)
-//   cout << "So "<<a[i]<<" xuat hien : " << dem << " lan\n";
-// }
-//}
-//ex234
-//void nhapmang(double a[],int n){
-//    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
-//        cin>>a[i];
-//    }
-//}
-//void demgiatri(double a[], double b[],int n,int m){
-//    nhapmang(a,n);
-//    nhapmang(b,m);
-//    for(int i=0;i<n;i++){
-//        int dem=0;
-//        for(int j=0;j<n;j++){
-//            if(a[i]==a[j]){
-//                if(j<i){
-//                    break;
-//                }
-//                else{
-//                    dem++;
-//                }
+//        for(int j=i;j<n;j++){
+//            if(a[j]<=a[i]){
+//                double value=a[i];
+//                a[i]=a[j];
+//                a[j]=value;
 //            }
 //        }
-//        if(dem==1){
-//                int value=0;
-//            for(int k=0;k<m;k++){
-//                if(a[i]==b[k]){
-//                    value=1;
-//                }
-//            }
-//        if(value==0){
-//                cout<<a[i];
-//            }
-//        }
+//    }
+//}
+//void tronmang(double a[], double b[], double c[],int n,int m){//trộn 2 mảng lại
+//    for(int i=0;i<n;i++){
+//       c[i]=a[i];
 //    }
 //    for(int i=0;i<m;i++){
-//        int dem=0;
-//        for(int j=0;j<m;j++){
-//            if(b[i]==b[j]){
-//                if(j<i){
-//                    break;
-//                }
-//                else{
-//                    dem++;
-//                }
+//        c[i+n]=b[i];
+//    }
+//}
+//ex266ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (double a[], int &n){//xuất mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void themvitri(double a[], int &n,int x,int k){
+//    n++;
+//    for(int i=n-1;i>k;i--){
+//        a[i]=a[i-1];
+//    }
+//    a[k]=x;
+//}
+//ex269ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (double a[], int &n){//xuất mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void sapxeptang(double a[],int &n){
+//    for(int i=0;i<n;i++){
+//        for(int j=0;j<n;j++){
+//            if(a[j]>=a[i]){
+//                int value=a[i];
+//                a[i]=a[j];
+//                a[j]=value;
 //            }
 //        }
-//        if(dem==1){
-//                int value=0;
-//            for(int k=0;k<n;k++){
+//    }
+//}
+//void themgiatri(double a[],int &n,double x){
+//    ++n;
+//    a[n-1]=x;
+//}
+//ex272ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (double a[], int &n){//xuất mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void xoavitri(double a[],int &n){
+//     double value=0,flag=0,numbers=1;
+//    for(int i=0;i<n;i++){
+//        for(int j=0;j<n;j++){
+//            if(a[j]>=a[i]){
+//                value=a[j];
+//            }
+//        }
+//    }
+//    for(int i=0;i<n;i++){
+//        if(a[i]==value){
+//            flag++;
+//        }
+//    }
+//    while(numbers<=flag){
+//        int q=0;
+//        for(int i=0;i<n;i++){
+//        if(a[i]==value){
+//            q=i;
+//            break;
+//            }
+//        }
+//        for(int i=q;i<n;i++){
+//            a[i]=a[i+1];
+//        }
+//        --n;
+//        numbers++;
+//    }
+//}
+//ex276ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (double a[], int &n){//xuất mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void xoatrungx(double a[],int &n,double x){
+//    for(int i=n-1;i>=0;i--){
+//        if(a[i]==x){
+//            for(int j=i;j<n;j++){
+//                a[j]=a[j+1];
+//            }
+//        --n;
+//        }
+//    }
+//}
+//ex278ok
+//void rutgonmang(double a[],int &n){
+//    for(int i=0;i<n;i++){
+//        for(int j=n-1;j>=(i+1);j--){
+//            if(a[j]==a[i]){
+//                if(j>=n){
+//                    j=n-1;
+//                }
+//                for(int k=j;k<n;k++){
+//                    a[k]=a[k+1];
+//                }
+//                --n;
+//            }
+//        }
+//    }
+//}
+//ex281ok
+//void nhapmang(int a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (int a[], int n){//xuất mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void chandaulecuoi(int a[],int n){
+//    int flag=0;
+//    int flag1=n-1;
+//    for(int i=0;i<n;i++){
+//        if(a[i]%2==0&&a[i]!=0){
+//            int value=a[flag];
+//            a[flag]=a[i];
+//            a[i]=value;
+//            flag++;
+//        }
+//    }
+//    xuat(a,n);
+//    cout<<endl;
+//    for(int i=n-1;i>=0;i--){
+//         if(a[i]%2!=0&&a[i]!=0){
+//            int value=a[flag1];
+//            a[flag1]=a[i];
+//            a[i]=value;
+//            flag1--;
+//        }
+//    }
+//    xuat(a,n);
+//}
+//ex284ok
+//void nhapmang(int a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (int a[], int n){//xuất mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void daochan(int a[],int n){
+//    int l=n/2;
+//    for(int i=0;i<l;i++){
+//        if(a[i]%2==0){
+//            for(int j=n-1;j>l;j--){
+//                if(a[j]%2==0){
+//                    int value=a[i];
+//                    a[i]=a[j];
+//                    a[j]=value;
 //
-//                if(b[i]==a[k]){
-//                    value=1;
 //                }
-//            }
-//        if(value==0){
-//                cout<<b[i];
 //            }
 //        }
 //    }
 //}
-//ex236
-//void nhapmang(double a[],int n){
+//ex286ok
+//void nhapmang(double a[],int n){//nhập mảng
 //    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
+//        cout<<"Nhap mang a["<<i<<"]: ";
 //        cin>>a[i];
 //    }
 //}
-//void demsolan(double a[],double b[],int n,int m){
-//    nhapmang(a,n);
-//    nhapmang(b,m);
+//void xuat (double a[], int n){//xuất mảng
 //    for(int i=0;i<n;i++){
-//              int value=0;
-//        for(int j=0;j<n;j++){
-//            if(a[j]==a[i]){
-//                if(j<i){
-//                break;
-//                }
-//                else{
-//                value++;
-//                }
-//            }
-//    }
-//    if(value!=0){
-//        int value1=0;
-//        for(int k=0;k<m;k++){
-//            if(b[k]==a[i]){
-//                value1++;
-//            }
-//        }
-//        cout<<"so "<<a[i]<<" xuat hien trong mang b: "<<value1<<endl;
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
 //    }
 //}
-//}
-//ex238
-//void nhapmang(double a[],int n){
+//void dichtrai(double a[],int n){
+//    int value=a[0];
 //    for(int i=0;i<n;i++){
-//        cout<<"nhap a["<<i<<"]: ";
+//        a[i]=a[i+1];
+//    }
+//    a[n-1]=value;
+//}
+//ex288ok
+//#include <Windows.h>
+//void set_color(int color){
+//    WORD wColor;
+//    HANDLE hStdOut =GetStdHandle(STD_OUTPUT_HANDLE);
+//    CONSOLE_SCREEN_BUFFER_INFO csbi;
+//    if(GetConsoleScreenBufferInfo(hStdOut,&csbi)){
+//        wColor =(csbi.wAttributes& 0xF0) +(color & 0x0F);
+//        SetConsoleTextAttribute(hStdOut,wColor);
+//    }
+//}
+//void nhapmang(int a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
 //        cin>>a[i];
 //    }
 //}
-//void lietkenhieunhat(double a[],int n){
-//    nhapmang(a,n);
-//    int max_value=0;
+//void xuat (int a[], int n){//xuất mảng
 //    for(int i=0;i<n;i++){
-//        int flag=0;
-//        for(int j=0;j<n;j++){
-//            if(a[j]==a[i]){
-//                if(j<i){
-//                    break;
-//                }
-//                else{
-//                    flag++;
-//                }
-//            }
-//        }
-//        if(flag>=max_value){
-//            max_value=flag;
-//        }
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
 //    }
+//}
+//void xuatchanle (int a[],int n){
 //    for(int i=0;i<n;i++){
-//        int flag=0;
-//        for(int j=0;j<n;j++){
-//            if(a[j]==a[i]){
-//                if(j<i){
-//                    break;
-//                }
-//                else{
-//                    flag++;
-//                }
-//            }
+//        if(a[i]%2==0){
+//            set_color(6);
+//            cout<<a[i]<<" ";
 //        }
-//        if(flag==max_value){
+//        else{
+//            set_color(7);
 //            cout<<a[i]<<" ";
 //        }
 //    }
 //}
-//ex239
-void nhapmang(int a[],int n){
-    for(int i=0;i<n;i++){
-        cout<<"nhap a["<<i<<"]: ";
-        cin>>a[i];
-    }
-}
-int check_number(int x){
-    int digit=0;
-    for(int i=1;i<x;i++){
-        if(x%i==0){
-            digit++;
-        }
-    }
-    if(digit==1){
-        return 1;
-    }
-    else{
-        return 0;
-    }
-}
-void demntphanbiet(int a[],int n){
-    nhapmang(a,n);
-    int value=check_number(a[n]);
-    for(int i=0;i<n;i++){
-        int digit=0;
-        for(int j=0;j<n;j++){
-            if(value==1){
-                if(j<i){
-                    break;
-                }
-                else{
-                    digit++;
-                }
-            }
-        }
-        cout<<"so nguyen to a[i]"<<" "<<digit;
-    }
-}
+//ex292ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void xuat (double a[], int n){//xuất mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"a["<<i<<"]="<<a[i]<<endl;
+//    }
+//}
+//void nguyenhoa (double a[],int n){
+//    for(int i=0;i<n;i++){
+//        if(a[i]!=(int)a[i]){
+//            a[i]=round(a[i]);
+//        }
+//    }
+//}
+//ex293ok_nhưng phải viết lại
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void lietkecon(double a[],int n){
+//    int number=1;
+//    for(int i=0;i<n;i++){
+//        cout<<"mang con "<<number<<": ";
+//        cout<<a[i];
+//        number++;
+//        for(int j=i;j<n-1;j++){
+//            cout<<endl;
+//            cout<<"mang con "<<number<<": ";
+//            for(int k=i;k<=j+1;k++){
+//                cout<<a[k]<<" ";
+//            }
+//        number++;
+//        cout<<endl;
+//        }
+//    }
+//}
+//ex294ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void conlonhonhai(double a[],int n){
+//    for(int i=0;i<n;i++){
+//        for(int j=i+1;j<n-1;j++){
+//            for(int k=i;k<=j+1;k++){
+//                cout<<a[k];
+//            }
+//        cout<<endl;
+//        }
+//    }
+//}
+//ex297ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//double max_value(double a[],int n){
+//    int flag=0;
+//    for(int i=0;i<n;i++){
+//        for(int j=0;j<n;j++){
+//            if(a[j]<=a[i]){
+//                flag=j;
+//            }
+//        }
+//    }
+//    return flag;
+//}
+//void sapxeptang(double a[],int n){
+//    for(int i=0;i<n;i++){
+//        for(int j=0;j<n;j++){
+//            if(a[j]>=a[i]){
+//                int value=a[i];
+//                a[i]=a[j];
+//                a[j]=value;
+//            }
+//        }
+//    }
+//}
+//void lietke(double a[],int n){
+//    int flag=max_value(a,n);
+//    for(int i=0;i<n;i++){
+//        if(i==flag){
+//            cout<<a[i]<<endl;
+//            for(int j=0;j<n;j++){
+//                if(j!=flag){
+//                    cout<<a[j]<<" "<<a[flag];
+//                    cout<<endl;
+//                }
+//            }
+//        }
+//        else{
+//            for(int j=i;j<n-2;j++){
+//                for(int k=i;k<=j+1;k++){
+//                    cout<<a[k]<<" ";
+//                }
+//                cout<<a[flag];
+//            cout<<endl;
+//            }
+//        }
+//    }
+//}
+//ex299
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void lietkeconduong (double a[], int n){
+//    int number=0;
+//    for(int i=0;i<n;i++){
+//        if(a[i]>0){
+//            number++;
+//        }
+//    }
+//    double b[number];
+//    int flag=0;
+//    for(int i=0;i<n;i++){
+//        if(a[i]>0){
+//            b[flag]=a[i];
+//            flag++;
+//        }
+//    }
+//    for(int i=0;i<number;i++){
+//        for(int j=i;j<number-1;j++){
+//            for(int k=i;k<=j+1;k++){
+//                cout<<b[k]<<" ";
+//            }
+//        cout<<endl;
+//        }
+//    }
+//}
+//ex301ok
+//void nhapmang(double a[],int n){//nhập mảng
+//    for(int i=0;i<n;i++){
+//        cout<<"Nhap mang a["<<i<<"]: ";
+//        cin>>a[i];
+//    }
+//}
+//void rutgonmang(double a[],int &n){
+//    for(int i=0;i<n;i++){
+//        for(int j=n-1;j>i;j--){
+//            if(a[j]==a[i]){
+//                for(int k=j;k<n;k++){
+//                    a[k]=a[k+1];
+//                }
+//                --n;
+//            }
+//        }
+//    }
+//}
+//void kiemtracon(double a[],double b[],int &n,int &m){
+//    if(n<=m){
+//        int flag=0;
+//        for(int i=0;i<n;i++){
+//            for(int j=0;j<m;j++){
+//                if(b[j]==a[i]){
+//                    flag++;
+//                }
+//            }
+//        }
+//        if(flag==n){
+//            cout<<"mang a la con cua mang b";
+//        }
+//        else{
+//            cout<<"mang a khong la con cua mang b";
+//        }
+//    }
+//    else{
+//        cout<<"mang a khong la con cua mang b";
+//    }
+//}
 int main(){
-    int n,m;
-//    double a[1000];
-//    int a[1000];
-//    cout<<"Nhap so phan tu:n,m ";
-//    cin>> n>>m;
-    cout<<"Nhap so phan tu: ";
-    cin>>n;
-//ex239
-int a[1000];
-demntphanbiet(a,n);
-//ex238
-//double a[1000];
-//lietkenhieunhat(a,n);
-//ex236
-//double a[1000], b[1000];
-//demsolan(a,b,n,m);
-//ex234
-//double a[1000], b[1000];
-//demgiatri(a,b,n,m);
-//ex230
-//double a[1000];
+    double a[1000];
+    int n;
+//ex301
+//int m;
+//double b[100];
+//cout<<"enter n,m: ";
+//cin>>n>>m;
+//nhapmang(a,n);
+//cout<<endl;
+//nhapmang(b,m);
+//rutgonmang(a,n);
+//rutgonmang(b,m);
+//kiemtracon(a,b,n,m);
+//ex299
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//lietkeconduong(a,n);
+//ex296
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//sapxeptang(a,n);
 //lietke(a,n);
-//ex229
-//double a[1000];
-//demphanbiet(a,n);
-//ex215
-//double a[1000];
-//khoangcachtb(a,n);
-//ex202
+//ex294
+//cout<<"enter n: ";
+//cin>>n;
+//if(n<=2){
+//    cout<<"Nhap lai";
+//}
+//else{
+//nhapmang(a,n);
+//conlonhonhai(a,n);
+//}
+//ex293
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//lietkecon(a,n);
+//ex292
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//nguyenhoa(a,n);
+//xuat(a,n);
+//ex288
 //int a[1000];
-//tongchuc(a,n);
-//ex195
-//double a[1000];
-//find_abc(a,n);
-//ex189
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//xuatchanle(a,n);
+//ex286
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//dichtrai(a,n);
+//xuat(a,n);
+//ex284
 //int a[1000];
-//lietkedadule(a,n);
-//ex186
-//double a[1000];
-//find_location(a,n);
-//ex181
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//daochan(a,n);
+//xuat(a,n);
+//ex281
 //int a[1000];
-//find_value(a,n);
-//ex179
-//double a[1000];
-//find_value(a,n);
-//ex175
-//double a[1000];
-//find_2_value(a,n);
-//ex174
-//double a[1000];
-//find_value(a,n);
-//ex173
-//int a[1000];
-//find_value(a,n);
-//ex171
-//int a[1000];
-//ucln(a,n);
-//int ss=ucln(a,n);
-//cout<<ss;
-//ex169
-//int a[1000];
-//find_value(a,n);
-//ex167
-//int a[1000];
-//find_value(a,n);
-//ex166
-//    int a[1000];
-//    dauledautien(a,n);
-//ex165
-//    string a[1000];
-//    fine_location(a,n);
-//ex162
-//find_location(a,n);
-//ex161
-//double x,y;
-//cout<<"Nhap x,y: ";
-//cin>>x>>y;
-//dautientrongkhoang(a,n,x,y);
-//ex158
-//timx(a,n);
-//ex157
-//timdoan(a,n);
-//ex155
-//    double x;
-//    cout<<"Nhap x: ";
-//    cin>>x;
-//furthest_from_x_value(a,n,x);
-//ex150
-//maximum_negative_value(a,n);
-//ex141
-//small_positive_value_location(a,n);
-//ex140
-//small_positive_value(a,n);
-//ex139
-//the_last_perfect_number_location(a,n);
-//ex138
-//first_even_value_position(a,n);
-//ex137
-//position_with_minimum_value(a,n);
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//chandaulecuoi(a,n);
+//ex278
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//rutgonmang(a,n);
+//xuat(a,n);
+//ex276
+//int x;
+//cout<<"Nhap n: ";
+//cin>>n;
+//cout<<"Nhap x: ";
+//cin>>x;
+//nhapmang(a,n);
+//xoatrungx(a,n,x);
+//xuat(a,n);
+//ex272
+//int k;
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//xoavitri(a,n);
+//xuat(a,n);
+//ex269
+//double x;
+//cout<<"enter n,x: ";
+//cin>>n>>x;
+//nhapmang(a,n);
+//sapxeptang(a,n);
+//themgiatri(a,n,x);
+//sapxeptang(a,n);
+//xuat(a,n);
+//ex266
+//int k;
+//double x;
+//cout<<"enter n: "<<endl;
+//cin>>n;
+//cout<<"Nhap gia tri can them: "<<endl;
+//cin>>x;
+//cout<<"Nhap vi tri them vao: "<<endl;
+//cin>>k;
+//nhapmang(a,n);
+//themvitri(a,n,x,k);
+//xuat(a,n);
+//ex264
+//double b[1000],c[1000];
+//int m;
+//cout<<"enter n,m: ";
+//cin>>n>>m;
+//nhapmang(a,n);
+//cout<<endl;
+//nhapmang(b,m);
+//tronmang(a,b,c,n,m);
+//sapxepmang(c,n+m);
+//xuat(c,n+m);
+//ex263
+//cout<<"enter n: ";
+//cin>> n;
+//nhapmang(a,n);
+//sxmangamgiam(a,n);
+//sxmangduongtang(a,n);
+//xuat(a,n);
+//ex260
+//double b[1000];
+//int m;
+//cout<<"enter n,m: ";
+//cin>>n>>m;
+//nhapmang(a,n);
+//cout<<endl;
+//nhapmang(b,m);
+//rutgonmang(a,n);
+//rutgonmang(b,m);
+//kthoanvi(a,b,n,m);
+//ex258
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//nguyetotang(a,n);
+//xuat(a,n);
+//ex257
+//cout<<"enter n: ";
+//cin>>n;
+//nhapmang(a,n);
+//vitriletang(a,n);
+//xuat(a,n);
+//ex253
+//    double b[1000];
+//    int m;
+//    cout<<"enter n,m: ";
+//    cin>>n>>m;
+//if((n<0||n>100)&&(m<0||m>100)){
+//    cout<<"Nhap lai sao cho 0<n,m<100.";
+//}
+//else{
 //    nhapmang(a,n);
-//    xuat(a,n);
-//ex135
-//value>0_s(a,n);
-//ex134
-//    double maxss=max_value(a,n);
-//    cout<<"max value= "<<maxss;
-    return 0;
+//    cout<<endl;
+//    nhapmang(b,m);
+//    rutgonmang(a,n);
+//    rutgonmang(b,m);
+//    checkmang(a,b,n,m);
+//}
+//ex252
+//    cout<<"enter n: ";
+//    cin>>n;
+//    if(n<3){
+//        cout<<" mang khong the tao thanh dang song";
+//    }
+//    else{
+//        nhapmang(a,n);
+//        ktdangsong(a,n);
+//    }
+//ex250
+//    cout<<"enter n: ";
+//    cin>>n;
+//    nhapmang(a,n);
+//    sxtang(a,n);
+//    ktcsc(a,n);
 }
+
+
